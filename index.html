@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>裕欣源建材 - 福州水电与装修材料批发专家</title>
+  <script src="https://oss.vatebur.cn/flie/tailwindcss"></script>
+  <link href="https://oss.vatebur.cn/flie/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A', // 深蓝色 - 代表专业和信任
+            secondary: '#F97316', // 橙色 - 代表活力和热情
+            neutral: {
+              100: '#F8FAFC',
+              200: '#E2E8F0',
+              300: '#CBD5E1',
+              700: '#334155',
+              800: '#1E293B',
+              900: '#0F172A'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Montserrat', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            'elevation-1': '0 2px 4px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1)',
+            'elevation-2': '0 4px 6px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.1)',
+            'elevation-3': '0 10px 15px rgba(0,0,0,0.05), 0 4px 6px rgba(0,0,0,0.1)',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .transition-transform-opacity {
+        transition-property: transform, opacity;
+      }
+      .bg-gradient-blue {
+        background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+      }
+      .card-hover {
+        @apply transition-all duration-300 hover:shadow-elevation-3 hover:-translate-y-1;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-neutral-800 bg-neutral-100">
+  <!-- 顶部通知栏 -->
+  <div class="bg-primary text-white py-2 px-4 text-center text-sm">
+    <p>新客户首次下单满2000元立减200元！优惠热线：15005902473</p>
+  </div>
+
+  <!-- 导航栏 -->
+  <header id="navbar" class="bg-white shadow-elevation-1 transition-all duration-300 sticky top-0 z-50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <!-- Logo -->
+        <a href="#" class="flex items-center space-x-2">
+          <i class="fa fa-building-o text-primary text-3xl"></i>
+          <span class="font-display font-bold text-xl sm:text-2xl text-primary">裕欣源建材</span>
+        </a>
+
+        <!-- 桌面端导航 -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="#home" class="text-neutral-800 hover:text-primary font-medium transition-colors">首页</a>
+          <a href="#products" class="text-neutral-800 hover:text-primary font-medium transition-colors">产品中心</a>
+          <a href="#about" class="text-neutral-800 hover:text-primary font-medium transition-colors">关于我们</a>
+          <a href="#advantage" class="text-neutral-800 hover:text-primary font-medium transition-colors">服务优势</a>
+          <a href="#contact" class="text-neutral-800 hover:text-primary font-medium transition-colors">联系我们</a>
+        </nav>
+
+        <!-- 联系电话和购物车 -->
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="tel:15005902473" class="flex items-center text-primary font-medium">
+            <i class="fa fa-phone mr-2"></i>
+            <span>15005902473</span>
+          </a>
+          <a href="#" class="text-neutral-800 hover:text-primary transition-colors relative">
+            <i class="fa fa-shopping-cart text-xl"></i>
+            <span class="absolute -top-2 -right-2 bg-secondary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+          </a>
+        </div>
+
+        <!-- 移动端菜单按钮 -->
+        <button id="menu-toggle" class="md:hidden text-neutral-800 hover:text-primary focus:outline-none">
+          <i class="fa fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-neutral-200">
+      <div class="container mx-auto px-4 py-3 space-y-3">
+        <a href="#home" class="block py-2 text-neutral-800 hover:text-primary font-medium">首页</a>
+        <a href="#products" class="block py-2 text-neutral-800 hover:text-primary font-medium">产品中心</a>
+        <a href="#about" class="block py-2 text-neutral-800 hover:text-primary font-medium">关于我们</a>
+        <a href="#advantage" class="block py-2 text-neutral-800 hover:text-primary font-medium">服务优势</a>
+        <a href="#contact" class="block py-2 text-neutral-800 hover:text-primary font-medium">联系我们</a>
+        <a href="tel:+8615005902473" class="block py-2 text-primary font-medium">
+          <i class="fa fa-phone mr-2"></i>15005902473
+        </a>
+        <a href="#" class="block py-2 text-neutral-800 hover:text-primary font-medium">
+          <i class="fa fa-shopping-cart mr-2"></i>购物车 (3)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 英雄区域 -->
+  <section id="home" class="relative h-[80vh] min-h-[600px] bg-neutral-900 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-neutral-900/70 z-10"></div>
+      <img src="https://oss.vatebur.cn/img/image-20250724152744542.png" alt="现代化建筑外观" class="w-full h-full object-cover">
+    </div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center relative z-20">
+      <div class="max-w-3xl">
+        <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-display font-bold text-white leading-tight text-shadow mb-6">
+          专业建材批发<br>一站式装修解决方案
+        </h1>
+        <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 mb-8 max-w-2xl">
+          裕欣源建材提供高品质水电材料和装修材料，为您的项目提供可靠保障。<br>10年行业经验，超200家客户的信赖选择。
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#products" class="bg-secondary hover:bg-secondary/90 text-white font-medium px-8 py-3 rounded-md transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            查看产品
+          </a>
+          <a href="tel:+8615005902473" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-medium px-8 py-3 rounded-md transition-all backdrop-blur-sm">
+            联系我们
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+      <a href="#products" class="text-white/80 hover:text-white">
+        <i class="fa fa-chevron-down text-2xl"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- 产品分类 -->
+  <section id="products" class="py-20 bg-neutral-100">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] font-display font-bold text-neutral-900 mb-4">
+          产品中心
+        </h2>
+        <p class="text-neutral-700 max-w-2xl mx-auto text-lg">
+          我们提供全方位的水电和装修材料，满足您从基础建设到精致装修的所有需求
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- 电缆电线 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-elevation-2 card-hover group">
+          <div class="h-56 overflow-hidden">
+            <img src="https://oss.vatebur.cn/img/O1CN01lEFWlu1cfDHYXK6Xr_!!56873627.png" alt="电缆电线产品展示" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-6">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-bolt text-primary text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">电缆电线</h3>
+            <p class="text-neutral-700 mb-4">提供各类高品质电缆、电线，安全可靠，符合国家标准，满足不同工程需求。</p>
+            <a href="cable-details.html" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">
+              查看详情
+              <i class="fa fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 水管配件 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-elevation-2 card-hover group">
+          <div class="h-56 overflow-hidden">
+            <img src="https://oss.vatebur.cn/img/15953122862.jpg" alt="水管配件产品展示" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-6">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-tint text-primary text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">水管配件</h3>
+            <p class="text-neutral-700 mb-4">优质PPR管、PVC管、铜管及各类配件，抗腐蚀、耐高压，使用寿命长。</p>
+            <a href="pipe-details.html" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">
+              查看详情
+              <i class="fa fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 卫浴洁具 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-elevation-2 card-hover group">
+          <div class="h-56 overflow-hidden">
+            <img src="https://oss.vatebur.cn/img/ban1.jpg" alt="卫浴洁具产品展示" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-6">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-bath text-primary text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">卫浴洁具</h3>
+            <p class="text-neutral-700 mb-4">时尚美观的卫浴产品，节水环保，品质卓越，为您打造舒适的家居体验。</p>
+            <a href="#" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">
+              查看详情
+              <i class="fa fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 灯具照明 -->
+        <div class="bg-white rounded-xl overflow-hidden shadow-elevation-2 card-hover group">
+          <div class="h-56 overflow-hidden">
+            <img src="https://oss.vatebur.cn/img/pic.jpg" alt="灯具照明产品展示" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-6">
+            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+              <i class="fa fa-lightbulb-o text-primary text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-neutral-900 mb-2">灯具照明</h3>
+            <p class="text-neutral-700 mb-4">多元化照明解决方案，节能LED灯、吊灯、吸顶灯等，满足不同空间照明需求。</p>
+            <a href="#" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">
+              查看详情
+              <i class="fa fa-arrow-right ml-2 text-sm"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="#" class="inline-block bg-gray-300 text-gray-500 cursor-not-allowed font-medium px-8 py-3 rounded-md shadow-md" aria-disabled="true">
+          <!-- 
+        <a href="#" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-md transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+           -->
+          查看全部产品
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我们 -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="relative">
+          <div class="rounded-xl overflow-hidden shadow-elevation-3">
+            <img src="https://oss.vatebur.cn/img/image-20250724155316556.png" alt="裕欣源建材仓库实景" class="w-full h-auto">
+          </div>
+          <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-secondary rounded-lg shadow-elevation-2 hidden md:block">
+            <div class="h-full flex flex-col items-center justify-center text-white">
+              <span class="text-4xl font-bold">15+</span>
+              <span class="text-lg">年行业经验</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] font-display font-bold text-neutral-900 mb-6">
+            关于裕欣源建材
+          </h2>
+          <p class="text-neutral-700 mb-6 text-lg leading-relaxed">
+            裕欣源建材成立于2010年，是一家专业从事水电材料和装修材料批发与销售的综合性企业。经过多年的发展，我们已成为行业内具有较高知名度和良好口碑的供应商。
+          </p>
+          <p class="text-neutral-700 mb-6 text-lg leading-relaxed">
+            我们与国内外多家知名品牌建立了长期稳定的合作关系，产品涵盖电缆电线、水管配件、卫浴洁具、灯具照明等多个领域，能够满足不同客户的多样化需求。
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                <i class="fa fa-check text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-neutral-900 mb-1">品质保证</h4>
+                <p class="text-neutral-700 text-sm">所有产品均经过严格质检，确保符合国家标准</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                <i class="fa fa-truck text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-neutral-900 mb-1">快速配送</h4>
+                <p class="text-neutral-700 text-sm">覆盖全城的配送网络，确保及时送达</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                <i class="fa fa-tags text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-neutral-900 mb-1">价格优势</h4>
+                <p class="text-neutral-700 text-sm">直接厂家供货，省去中间环节，价格更实惠</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1 flex-shrink-0">
+                <i class="fa fa-users text-primary"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-neutral-900 mb-1">专业团队</h4>
+                <p class="text-neutral-700 text-sm">15年以上经验的专业团队，提供技术支持</p>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-8 py-3 rounded-md transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+            联系我们
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 服务优势 -->
+  <section id="advantage" class="py-20 bg-neutral-100">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] font-display font-bold text-neutral-900 mb-4">
+          服务优势
+        </h2>
+        <p class="text-neutral-700 max-w-2xl mx-auto text-lg">
+          选择裕欣源建材，享受全方位的优质服务，让您的采购更加轻松高效
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 正品保障 -->
+        <div class="bg-white rounded-xl p-8 shadow-elevation-2 card-hover">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <i class="fa fa-shield text-primary text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-4">正品保障</h3>
+          <p class="text-neutral-700">
+            所有产品均来自正规渠道，100%正品保障，提供质量检测报告和售后服务，让您无后顾之忧。
+          </p>
+        </div>
+
+        <!-- 价格优势 -->
+        <div class="bg-white rounded-xl p-8 shadow-elevation-2 card-hover">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <i class="fa fa-tags text-primary text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-4">价格优势</h3>
+          <p class="text-neutral-700">
+            直接与厂家合作，省去中间环节，降低采购成本，同等质量价格更低，为您节省预算。
+          </p>
+        </div>
+
+        <!-- 快速配送 -->
+        <div class="bg-white rounded-xl p-8 shadow-elevation-2 card-hover">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <i class="fa fa-truck text-primary text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-4">快速配送</h3>
+          <p class="text-neutral-700">
+            拥有专业的物流团队和完善的配送网络，市区内24小时送达，郊区48小时内送达。
+          </p>
+        </div>
+
+        <!-- 专业团队 -->
+        <div class="bg-white rounded-xl p-8 shadow-elevation-2 card-hover">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <i class="fa fa-users text-primary text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-4">专业团队</h3>
+          <p class="text-neutral-700">
+            提供一对一的专业咨询服务，根据您的需求提供个性化解决方案，解答您的技术疑问。
+          </p>
+        </div>
+
+        <!-- 库存充足 -->
+        <div class="bg-white rounded-xl p-8 shadow-elevation-2 card-hover">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <i class="fa fa-archive text-primary text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-4">库存充足</h3>
+          <p class="text-neutral-700">
+            5000平方米的大型仓库，常规产品现货供应，避免因缺货导致的工期延误。
+          </p>
+        </div>
+
+        <!-- 售后无忧 -->
+        <div class="bg-white rounded-xl p-8 shadow-elevation-2 card-hover">
+          <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+            <i class="fa fa-headphones text-primary text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-neutral-900 mb-4">售后无忧</h3>
+          <p class="text-neutral-700">
+            7*24小时售后服务热线，专业售后团队快速响应，解决您的使用问题和退换货需求。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 客户评价 -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] font-display font-bold text-neutral-900 mb-4">
+          客户评价
+        </h2>
+        <p class="text-neutral-700 max-w-2xl mx-auto text-lg">
+          听听我们的客户怎么说，他们的反馈是我们不断进步的动力
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 评价1 -->
+        <div class="bg-neutral-100 rounded-xl p-8 shadow-elevation-1 card-hover">
+          <div class="flex items-center mb-6">
+            <img src="https://oss.vatebur.cn/img/wechat_2025-07-24_160114_094.png" alt="张总 - 建筑公司老板" class="w-14 h-14 rounded-full object-cover mr-4">
+            <div>
+              <h4 class="font-bold text-neutral-900">张总 - 建筑公司老板</h4>
+              <div class="flex text-yellow-400 mt-1">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-neutral-700 italic">
+            "裕欣源建材的产品质量非常可靠，我们公司多个项目都使用了他们的电缆和水管，从未出现过任何问题。而且他们的配送速度很快，能够及时满足我们的工程进度需求。"
+          </p>
+        </div>
+
+        <!-- 评价2 -->
+        <div class="bg-neutral-100 rounded-xl p-8 shadow-elevation-1 card-hover">
+          <div class="flex items-center mb-6">
+            <img src="https://oss.vatebur.cn/img/image-20250724160617553.png" alt="李设计师 - 室内设计公司" class="w-14 h-14 rounded-full object-cover mr-4">
+            <div>
+              <h4 class="font-bold text-neutral-900">李设计师 - 室内设计公司</h4>
+              <div class="flex text-yellow-400 mt-1">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-neutral-700 italic">
+            "作为设计师，我很看重产品的美观性和品质。裕欣源建材的卫浴和灯具产品款式新颖，质量上乘，能够很好地满足我们客户的高端装修需求。他们的专业团队也给了我们很多实用的建议。"
+          </p>
+        </div>
+
+        <!-- 评价3 -->
+        <div class="bg-neutral-100 rounded-xl p-8 shadow-elevation-1 card-hover">
+          <div class="flex items-center mb-6">
+            <img src="https://oss.vatebur.cn/img/wechat_2025-07-24_161129_793.png" alt="王师傅 - 水电工" class="w-14 h-14 rounded-full object-cover mr-4">
+            <div>
+              <h4 class="font-bold text-neutral-900">王师傅 - 水电工</h4>
+              <div class="flex text-yellow-400 mt-1">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-neutral-700 italic">
+            "我从业20多年了，一直和裕欣源建材合作。他们的产品性价比很高，特别是水管和电线，质量稳定，施工方便。而且他们的售后服务非常到位，有问题随时可以联系解决。"
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系我们 -->
+  <section id="contact" class="py-20 bg-neutral-100">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] font-display font-bold text-neutral-900 mb-6">
+            联系我们
+          </h2>
+          <p class="text-neutral-700 mb-8 text-lg leading-relaxed">
+            无论您是有产品咨询、项目合作，还是需要了解更多信息，都可以通过以下方式联系我们，我们将竭诚为您服务。
+          </p>
+
+          <div class="space-y-6 mb-8">
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fa fa-map-marker text-primary text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-neutral-900 mb-1">地址</h4>
+                <p class="text-neutral-700">福建省福州市晋安区家居物联网展示中心D区12号</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fa fa-phone text-primary text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-neutral-900 mb-1">电话</h4>
+                <p class="text-neutral-700">15005902473</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fa fa-envelope text-primary text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-neutral-900 mb-1">邮箱</h4>
+                <p class="text-neutral-700">admin@vatebur.cn</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fa fa-clock-o text-primary text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-neutral-900 mb-1">营业时间</h4>
+                <p class="text-neutral-700">周一至周日: 8:00 - 18:00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex space-x-4">
+            <a href="weixin://dl/chat?a1455705850" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary/90 transition-colors">
+              <i class="fa fa-weixin"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary/90 transition-colors">
+              <i class="fa fa-weibo"></i>
+            </a>
+            <a href="#" class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center hover:bg-primary/90 transition-colors">
+              <i class="fa fa-qq"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-elevation-2">
+          <h3 class="text-xl font-bold text-neutral-900 mb-6">发送询价</h3>
+          <form>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-neutral-700 mb-2">姓名</label>
+                <input type="text" id="name" class="w-full px-4 py-3 rounded-md border border-neutral-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="请输入您的姓名">
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium text-neutral-700 mb-2">电话</label>
+                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-md border border-neutral-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="请输入您的电话">
+              </div>
+            </div>
+            <div class="mb-6">
+              <label for="email" class="block text-sm font-medium text-neutral-700 mb-2">邮箱</label>
+              <input type="email" id="email" class="w-full px-4 py-3 rounded-md border border-neutral-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="请输入您的邮箱">
+            </div>
+            <div class="mb-6">
+              <label for="product" class="block text-sm font-medium text-neutral-700 mb-2">产品类别</label>
+              <select id="product" class="w-full px-4 py-3 rounded-md border border-neutral-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
+                <option value="">请选择产品类别</option>
+                <option value="cable">电缆电线</option>
+                <option value="pipe">水管配件</option>
+                <option value="bathroom">卫浴洁具</option>
+                <option value="lighting">灯具照明</option>
+                <option value="other">其他产品</option>
+              </select>
+            </div>
+            <div class="mb-6">
+              <label for="message" class="block text-sm font-medium text-neutral-700 mb-2">留言内容</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-md border border-neutral-300 focus:ring-2 focus:ring-primary focus:border-primary transition-colors" placeholder="请输入您的需求或疑问"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gray-300 text-gray-500 cursor-not-allowed font-medium py-3 rounded-md transition-all shadow-lg" disabled>
+              <!-- 注释按钮
+            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 rounded-md transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+               -->
+              提交询价（暂不可用）
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 地图 -->
+  <div class="h-[400px] bg-neutral-200">
+    <!-- 这里可以嵌入实际的地图，例如百度地图、高德地图等 -->
+    <div class="h-full flex items-center justify-center">
+      <div class="text-center">
+        <i class="fa fa-map-o text-5xl text-neutral-400 mb-4"></i>
+        <p class="text-neutral-600">地图暂不用...</p>
+      </div>
+    </div>
+  
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="bg-neutral-900 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="flex items-center space-x-2 mb-6">
+            <i class="fa fa-building-o text-white text-3xl"></i>
+            <span class="font-display font-bold text-xl">裕欣源建材</span>
+          </div>
+          <p class="text-neutral-400 mb-6">
+            专业从事水电材料和装修材料批发与销售的综合性企业，为您提供高品质的产品和服务。
+          </p>
+          <div class="flex space-x-4">
+            <a href="weixin://dl/chat?a1455705850" class="text-neutral-400 hover:text-white transition-colors">
+              <i class="fa fa-weixin text-xl"></i>
+            </a>
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors">
+              <i class="fa fa-weibo text-xl"></i>
+            </a>
+            <a href="#" class="text-neutral-400 hover:text-white transition-colors">
+              <i class="fa fa-qq text-xl"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-6">快速链接</h4>
+          <ul class="space-y-3">
+            <li><a href="#home" class="text-neutral-400 hover:text-white transition-colors">首页</a></li>
+            <li><a href="#products" class="text-neutral-400 hover:text-white transition-colors">产品中心</a></li>
+            <li><a href="#about" class="text-neutral-400 hover:text-white transition-colors">关于我们</a></li>
+            <li><a href="#advantage" class="text-neutral-400 hover:text-white transition-colors">服务优势</a></li>
+            <li><a href="#contact" class="text-neutral-400 hover:text-white transition-colors">联系我们</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-6">产品分类</h4>
+          <ul class="space-y-3">
+            <li><a href="cable-details.html" class="text-neutral-400 hover:text-white transition-colors">电缆电线</a></li>
+            <li><a href="pipe-details.html" class="text-neutral-400 hover:text-white transition-colors">水管配件</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">卫浴洁具</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">灯具照明</a></li>
+            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">其他产品</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-6">联系方式</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <i class="fa fa-map-marker text-neutral-400 mr-3 mt-1"></i>
+              <span class="text-neutral-400">福建省福州市晋安区家居物联网展示中心D区12号</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-phone text-neutral-400 mr-3 mt-1"></i>
+              <span class="text-neutral-400">15005902473</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-envelope text-neutral-400 mr-3 mt-1"></i>
+              <span class="text-neutral-400">admin@vatebur.cn</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fa fa-clock-o text-neutral-400 mr-3 mt-1"></i>
+              <span class="text-neutral-400">周一至周日: 8:00 - 18:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-neutral-800 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-neutral-500 text-sm mb-4 md:mb-0">
+            © 2025 裕欣源建材. 保留所有权利.
+          </p>
+           <p class="text-neutral-500 text-sm mb-4 md:mb-0">
+            闽ICP备2025109422号
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-neutral-500 hover:text-white text-sm transition-colors">隐私政策</a>
+            <a href="#" class="text-neutral-500 hover:text-white text-sm transition-colors">使用条款</a>
+            <a href="#" class="text-neutral-500 hover:text-white text-sm transition-colors">网站地图</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部按钮 -->
+  <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-elevation-2 opacity-0 invisible transition-all duration-300 hover:bg-primary/90 focus:outline-none">
+    <i class="fa fa-chevron-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script>
+    // 移动端菜单切换
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // 导航栏滚动效果
+    const navbar = document.getElementById('navbar');
+    let lastScrollTop = 0;
+    
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (scrollTop > 50) {
+        navbar.classList.add('py-2');
+        navbar.classList.remove('py-4');
+        navbar.classList.add('shadow-elevation-2');
+      } else {
+        navbar.classList.remove('py-2');
+        navbar.classList.add('py-4');
+        navbar.classList.remove('shadow-elevation-2');
+      }
+      
+      lastScrollTop = scrollTop;
+    });
+    
+    // 回到顶部按钮
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.remove('opacity-0', 'invisible');
+        backToTopButton.classList.add('opacity-100', 'visible');
+      } else {
+        backToTopButton.classList.add('opacity-0', 'invisible');
+        backToTopButton.classList.remove('opacity-100', 'visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          // 关闭移动菜单（如果打开）
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+          
+          // 滚动到目标位置
+          const navbarHeight = navbar.offsetHeight;
+          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+    

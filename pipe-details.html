@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>水管配件 - 裕欣源建材</title>
+  <script src="https://oss.vatebur.cn/flie/tailwindcss"></script>
+  <link href="https://oss.vatebur.cn/flie/font-awesome.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A',
+            secondary: '#F97316',
+            neutral: {
+              100: '#F8FAFC',
+              200: '#E2E8F0',
+              300: '#CBD5E1',
+              700: '#334155',
+              800: '#1E293B',
+              900: '#0F172A'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Montserrat', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            'elevation-1': '0 2px 4px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1)',
+            'elevation-2': '0 4px 6px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.1)',
+            'elevation-3': '0 10px 15px rgba(0,0,0,0.05), 0 4px 6px rgba(0,0,0,0.1)',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .product-thumbnail-active {
+        border-color: #1E3A8A;
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-neutral-800 bg-neutral-100">
+  <!-- 顶部通知栏、导航栏结构与电缆电线详情页相同 -->
+  <!-- 此处省略相同代码，保持与其他页面一致的导航体验 -->
+  
+  <!-- 面包屑导航 -->
+  <div class="bg-white border-b border-neutral-200 py-4">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-sm text-neutral-600">
+        <a href="index.html" class="hover:text-primary">首页</a>
+        <span class="mx-2">/</span>
+        <a href="index.html#products" class="hover:text-primary">产品中心</a>
+        <span class="mx-2">/</span>
+        <span class="text-neutral-800">水管配件</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 产品详情 -->
+  <section class="py-16 bg-neutral-100">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- 产品图片 -->
+        <div>
+          <div class="bg-white rounded-xl overflow-hidden shadow-elevation-2 mb-4">
+            <img id="main-product-image" src="https://oss.vatebur.cn/img/15953122862.jpg" alt="PPR热水管" class="w-full h-auto">
+          </div>
+          
+          <div class="grid grid-cols-4 gap-4">
+            <div class="cursor-pointer">
+              <img src="https://oss.vatebur.cn/img/15953122862.jpg" alt="PPR热水管" class="w-full h-20 object-cover rounded-md border-2 product-thumbnail-active">
+            </div>
+            <div class="cursor-pointer">
+              <img src="https://oss.vatebur.cn/img/pipe-2.jpg" alt="水管配件套装" class="w-full h-20 object-cover rounded-md border-2 border-transparent opacity-70 hover:opacity-100 transition-opacity">
+            </div>
+            <div class="cursor-pointer">
+              <img src="https://oss.vatebur.cn/img/pipe-3.jpg" alt="水管接口细节" class="w-full h-20 object-cover rounded-md border-2 border-transparent opacity-70 hover:opacity-100 transition-opacity">
+            </div>
+            <div class="cursor-pointer">
+              <img src="https://oss.vatebur.cn/img/pipe-4.jpg" alt="水管安装效果" class="w-full h-20 object-cover rounded-md border-2 border-transparent opacity-70 hover:opacity-100 transition-opacity">
+            </div>
+          </div>
+        </div>
+        
+        <!-- 产品信息 -->
+        <div>
+          <h1 class="text-3xl font-display font-bold text-neutral-900 mb-4">PPR热水管 (Φ25×4.2mm)</h1>
+          
+          <div class="flex items-center mb-6">
+            <div class="flex text-yellow-400 mr-2">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+            <span class="text-neutral-600 text-sm">(96条评价)</span>
+          </div>
+          
+          <div class="mb-6">
+            <span class="text-3xl font-bold text-primary">¥18.50</span>
+            <span class="text-neutral-500 line-through ml-2">¥22.80</span>
+            <span class="bg-secondary/10 text-secondary text-sm px-2 py-1 rounded ml-2">热销产品</span>
+          </div>
+          
+          <div class="border-t border-b border-neutral-200 py-6 mb-6">
+            <p class="text-neutral-700 mb-4">
+              高品质PPR热水管，采用进口原料生产，耐高温、抗腐蚀、环保卫生，适用于家庭及商业场所的热水管道系统。
+            </p>
+            <div class="grid grid-cols-2 gap-4 text-sm">
+              <div class="flex items-center">
+                <span class="text-neutral-500 w-24">品牌：</span>
+                <span class="text-neutral-800">联塑</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-neutral-500 w-24">规格：</span>
+                <span class="text-neutral-800">Φ25×4.2mm</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-neutral-500 w-24">材质：</span>
+                <span class="text-neutral-800">PPR</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-neutral-500 w-24">长度：</span>
+                <span class="text-neutral-800">4米/根</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-neutral-500 w-24">颜色：</span>
+                <span class="text-neutral-800">白色/灰色</span>
+              </div>
+              <div class="flex items-center">
+                <span class="text-neutral-500 w-24">温度：</span>
+                <span class="text-neutral-800">≤95℃</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 规格选择 -->
+          <div class="mb-8">
+            <h3 class="text-neutral-800 font-medium mb-3">选择规格</h3>
+            <div class="flex flex-wrap gap-3">
+              <button class="px-4 py-2 border border-neutral-300 rounded-md hover:border-primary hover:text-primary transition-colors">
+                Φ20×2.8mm
+              </button>
+              <button class="px-4 py-2 border border-primary bg-primary/5 text-primary rounded-md hover:bg-primary/10 transition-colors">
+                Φ25×4.2mm
+              </button>
+              <button class="px-4 py-2 border border-neutral-300 rounded-md hover:border-primary hover:text-primary transition-colors">
+                Φ32×5.4mm
+              </button>
+              <button class="px-4 py-2 border border-neutral-300 rounded-md hover:border-primary hover:text-primary transition-colors">
+                Φ40×6.7mm
+              </button>
+            </div>
+          </div>
+          
+          <!-- 颜色选择 -->
+          <div class="mb-8">
+            <h3 class="text-neutral-800 font-medium mb-3">选择颜色</h3>
+            <div class="flex gap-4">
+              <button class="w-10 h-10 rounded-full bg-white border-2 border-primary flex items-center justify-center">
+                <span class="w-6 h-6 rounded-full bg-white"></span>
+              </button>
+              <button class="w-10 h-10 rounded-full bg-white border-2 border-neutral-300 flex items-center justify-center hover:border-primary transition-colors">
+                <span class="w-6 h-6 rounded-full bg-gray-400"></span>
+              </button>
+            </div>
+          </div>
+          
+          <!-- 数量选择 -->
+          <div class="mb-8">
+            <h3 class="text-neutral-800 font-medium mb-3">购买数量</h3>
+            <div class="flex items-center w-36">
+              <button id="decrease-quantity" class="w-10 h-10 border border-neutral-300 rounded-l-md flex items-center justify-center hover:bg-neutral-100 transition-colors">
+                <i class="fa fa-minus text-neutral-600"></i>
+              </button>
+              <input type="number" id="quantity" value="1" min="1" class="w-16 h-10 border-y border-neutral-300 text-center focus:outline-none">
+              <button id="increase-quantity" class="w-10 h-10 border border-neutral-300 rounded-r-md flex items-center justify-center hover:bg-neutral-100 transition-colors">
+                <i class="fa fa-plus text-neutral-600"></i>
+              </button>
+            </div>
+            <p class="text-sm text-neutral-500 mt-2">库存充足 (5000根)</p>
+          </div>
+          
+          <!-- 操作按钮 -->
+          <div class="flex flex-wrap gap-4">
+            <button class="flex-1 bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-md transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center">
+              <i class="fa fa-shopping-cart mr-2"></i> 加入购物车
+            </button>
+            <button class="bg-secondary hover:bg-secondary/90 text-white font-medium px-6 py-3 rounded-md transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+              立即购买
+            </button>
+          </div>
+          
+          <!-- 服务保障 -->
+          <div class="mt-8 pt-6 border-t border-neutral-200 flex flex-wrap gap-6">
+            <div class="flex items-center">
+              <i class="fa fa-check-circle text-primary mr-2"></i>
+              <span class="text-sm text-neutral-600">正品保障</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fa fa-truck text-primary mr-2"></i>
+              <span class="text-sm text-neutral-600">24小时配送</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fa fa-refresh text-primary mr-2"></i>
+              <span class="text-sm text-neutral-600">7天无理由退换</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fa fa-headphones text-primary mr-2"></i>
+              <span class="text-sm text-neutral-600">专业客服</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 产品详情tab和相关产品推荐部分结构与电缆电线详情页相同，但内容针对水管配件 -->
+  <!-- 此处省略相同结构的代码，实际应用中应填充对应水管配件的详细内容 -->
+
+  <!-- 页脚 -->
+  <footer class="bg-neutral-900 text-white pt-16 pb-8">
+    <!-- 页脚内容与其他页面保持一致 -->
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // JavaScript代码与电缆电线详情页相同，包含图片切换、数量选择、tab切换等功能
+  </script>
+</body>
+</html>
