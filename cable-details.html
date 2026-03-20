@@ -3,894 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>电缆电线 - 裕欣源建材</title>
-  <script src="./tailwindcss"></script>
+  <meta name="description" content="裕欣源建材电缆电线详情页，展示铜芯绝缘电线常见规格、适用场景、供货方式与咨询入口。">
+  <title>电缆电线 | 裕欣源建材</title>
+  <link rel="icon" href="./favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@600;700&display=swap" rel="stylesheet">
   <link href="./font-awesome.min.css" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#1E3A8A',
-            secondary: '#F97316',
-            neutral: {
-              100: '#F8FAFC',
-              200: '#E2E8F0',
-              300: '#CBD5E1',
-              700: '#334155',
-              800: '#1E293B',
-              900: '#0F172A'
-            }
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Montserrat', 'system-ui', 'sans-serif']
-          },
-          boxShadow: {
-            'elevation-1': '0 2px 4px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1)',
-            'elevation-2': '0 4px 6px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.1)',
-            'elevation-3': '0 10px 15px rgba(0,0,0,0.05), 0 4px 6px rgba(0,0,0,0.1)',
-          }
-        }
-      }
-    }
-  </script>
-  <style type="text/tailwindcss">
-    @layer utilities {
-      .content-auto {
-        content-visibility: auto;
-      }
-      .text-shadow {
-        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      }
-      .product-thumbnail-active {
-        border-color: #1E3A8A;
-        opacity: 1;
-      }
-    }
-  </style>
+  <link href="./site.css" rel="stylesheet">
 </head>
-<body class="font-sans text-neutral-800 bg-neutral-100">
-  <!-- 顶部通知栏 -->
-  <div class="bg-primary text-white py-2 px-4 text-center text-sm">
-    <p>新客户首次下单满2000元立减200元！优惠热线：15005902473</p>
-  </div>
+<body>
+  <div class="topbar"><div class="container topbar-inner"><div class="topbar-note">WIRE & CABLE / FAST LOCAL RESPONSE</div><div class="topbar-links"><a href="tel:15005902473"><i class="fa fa-phone"></i> 15005902473</a><a href="./index.html#contact"><i class="fa fa-comments-o"></i> 获取工程报价</a></div></div></div>
 
-  <!-- 导航栏 -->
-  <header id="navbar" class="bg-white shadow-elevation-1 transition-all duration-300 sticky top-0 z-50">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-4">
-        <!-- Logo -->
-        <a href="index.html" class="flex items-center space-x-2">
-          <i class="fa fa-building-o text-primary text-3xl"></i>
-          <span class="font-display font-bold text-xl sm:text-2xl text-primary">裕欣源建材</span>
-        </a>
-
-        <!-- 桌面端导航 -->
-        <nav class="hidden md:flex space-x-8">
-          <a href="index.html#home" class="text-neutral-800 hover:text-primary font-medium transition-colors">首页</a>
-          <a href="index.html#products" class="text-primary font-medium transition-colors">产品中心</a>
-          <a href="index.html#about" class="text-neutral-800 hover:text-primary font-medium transition-colors">关于我们</a>
-          <a href="index.html#advantage" class="text-neutral-800 hover:text-primary font-medium transition-colors">服务优势</a>
-          <a href="index.html#contact" class="text-neutral-800 hover:text-primary font-medium transition-colors">联系我们</a>
-        </nav>
-
-        <!-- 联系电话和购物车 -->
-        <div class="hidden md:flex items-center space-x-6">
-          <a href="tel:15005902473" class="flex items-center text-primary font-medium">
-            <i class="fa fa-phone mr-2"></i>
-            <span>15005902473</span>
-          </a>
-          <a href="#" class="text-neutral-800 hover:text-primary transition-colors relative">
-            <i class="fa fa-shopping-cart text-xl"></i>
-            <span class="absolute -top-2 -right-2 bg-secondary text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
-          </a>
-        </div>
-
-        <!-- 移动端菜单按钮 -->
-        <button id="menu-toggle" class="md:hidden text-neutral-800 hover:text-primary focus:outline-none">
-          <i class="fa fa-bars text-2xl"></i>
-        </button>
-      </div>
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a class="brand" href="./index.html"><span class="brand-mark"><i class="fa fa-building-o"></i></span><span class="brand-text"><strong>裕欣源建材</strong><span>ENGINEERING SUPPLY</span></span></a>
+      <nav class="nav"><a href="./index.html">首页</a><a href="./index.html#categories">主营品类</a><a href="./index.html#capability">供应能力</a><a href="./index.html#contact">联系报价</a></nav>
+      <div class="header-ctas"><a class="header-phone" href="tel:15005902473"><i class="fa fa-phone"></i> 15005902473</a></div>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="打开菜单"><i class="fa fa-bars"></i></button>
     </div>
-
-    <!-- 移动端导航菜单 -->
-    <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-neutral-200">
-      <div class="container mx-auto px-4 py-3 space-y-3">
-        <a href="index.html#home" class="block py-2 text-neutral-800 hover:text-primary font-medium">首页</a>
-        <a href="index.html#products" class="block py-2 text-primary font-medium">产品中心</a>
-        <a href="index.html#about" class="block py-2 text-neutral-800 hover:text-primary font-medium">关于我们</a>
-        <a href="index.html#advantage" class="block py-2 text-neutral-800 hover:text-primary font-medium">服务优势</a>
-        <a href="index.html#contact" class="block py-2 text-neutral-800 hover:text-primary font-medium">联系我们</a>
-        <a href="tel:+8615005902473" class="block py-2 text-primary font-medium">
-          <i class="fa fa-phone mr-2"></i>15005902473
-        </a>
-        <a href="#" class="block py-2 text-neutral-800 hover:text-primary font-medium">
-          <i class="fa fa-shopping-cart mr-2"></i>购物车 (3)
-        </a>
-      </div>
-    </div>
+    <div class="container mobile-menu" data-mobile-menu><div class="mobile-panel"><a href="./index.html">首页</a><a href="./index.html#categories">主营品类</a><a href="./index.html#capability">供应能力</a><a href="./index.html#contact">联系报价</a><a href="tel:15005902473">拨打 15005902473</a></div></div>
   </header>
 
-  <!-- 面包屑导航 -->
-  <div class="bg-white border-b border-neutral-200 py-4">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-sm text-neutral-600">
-        <a href="index.html" class="hover:text-primary">首页</a>
-        <span class="mx-2">/</span>
-        <a href="index.html#products" class="hover:text-primary">产品中心</a>
-        <span class="mx-2">/</span>
-        <span class="text-neutral-800">电缆电线</span>
+  <main>
+    <section class="hero">
+      <div class="container breadcrumb-wrap"><ul class="breadcrumb"><li><a href="./index.html">首页</a></li><li><a href="./index.html#categories">主营品类</a></li><li>电缆电线</li></ul></div>
+      <div class="container detail-hero">
+        <div data-reveal>
+          <span class="eyebrow">Electrical Materials</span>
+          <h1 class="detail-title">常用电缆电线规格清晰展示，便于快速选型。</h1>
+          <p class="lead">适用于家装布线、门店改造、办公空间调整和小型工程配套，便于客户根据材质、线径和使用场景进行初步判断。</p>
+          <div class="tags" style="margin-top:24px;"><span class="tag"><i class="fa fa-bolt"></i> BV / BVR 常用品类</span><span class="tag"><i class="fa fa-shield"></i> 关注绝缘等级与线径</span><span class="tag"><i class="fa fa-truck"></i> 支持本地配送</span></div>
+          <div class="actions"><a class="button" href="tel:15005902473"><i class="fa fa-phone"></i> 电话确认规格</a><a class="button-secondary" href="./index.html#contact"><i class="fa fa-file-text-o"></i> 获取报价</a></div>
+        </div>
+        <div class="detail-visual" data-reveal><img src="./cable-application.jpg" alt="电缆施工应用场景"></div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- 产品详情 -->
-  <section class="py-16 bg-neutral-100">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- 产品图片 -->
-        <div>
-          <div class="bg-white rounded-xl overflow-hidden shadow-elevation-2 mb-4">
-            <img id="main-product-image" src="./56873627.png" alt="铜芯聚氯乙烯绝缘电线" class="w-full h-auto">
-          </div>
-          
-          <div class="grid grid-cols-4 gap-4">
-            <div class="cursor-pointer">
-              <img src="./56873627.png" alt="铜芯聚氯乙烯绝缘电线" class="w-full h-20 object-cover rounded-md border-2 product-thumbnail-active">
-            </div>
-            <div class="cursor-pointer">
-              <img src="./cable-2.jpg" alt="电缆卷盘" class="w-full h-20 object-cover rounded-md border-2 border-transparent opacity-70 hover:opacity-100 transition-opacity">
-            </div>
-            <div class="cursor-pointer">
-              <img src="./cable-3.jpg" alt="电线截面展示" class="w-full h-20 object-cover rounded-md border-2 border-transparent opacity-70 hover:opacity-100 transition-opacity">
-            </div>
-            <div class="cursor-pointer">
-              <img src="./cable-4.jpg" alt="电缆施工场景" class="w-full h-20 object-cover rounded-md border-2 border-transparent opacity-70 hover:opacity-100 transition-opacity">
-            </div>
+    <section class="detail-section light">
+      <div class="container detail-grid">
+        <div data-gallery data-reveal>
+          <div class="gallery-main"><img src="./56873627.png" alt="铜芯绝缘电线" data-gallery-main></div>
+          <div class="thumbs">
+            <button class="thumb is-active" type="button" data-gallery-thumb data-image="./56873627.png" data-alt="铜芯绝缘电线"><img src="./56873627.png" alt="铜芯绝缘电线缩略图"></button>
+            <button class="thumb" type="button" data-gallery-thumb data-image="./cable-2.jpg" data-alt="电缆卷盘展示"><img src="./cable-2.jpg" alt="电缆卷盘"></button>
+            <button class="thumb" type="button" data-gallery-thumb data-image="./cable-3.jpg" data-alt="电线截面细节"><img src="./cable-3.jpg" alt="电线截面"></button>
+            <button class="thumb" type="button" data-gallery-thumb data-image="./cable-4.jpg" data-alt="电缆施工场景"><img src="./cable-4.jpg" alt="电缆施工"></button>
           </div>
         </div>
-        
-        <!-- 产品信息 -->
-        <div>
-          <h1 class="text-3xl font-display font-bold text-neutral-900 mb-4">铜芯聚氯乙烯绝缘电线 (BV线)</h1>
-          
-          <div class="flex items-center mb-6">
-            <div class="flex text-yellow-400 mr-2">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star-half-o"></i>
-            </div>
-            <span class="text-neutral-600 text-sm">(128条评价)</span>
+        <article class="panel" data-reveal>
+          <div><span class="eyebrow">Representative Product</span><h2 class="title" style="font-size:2rem;margin-top:16px;">铜芯聚氯乙烯绝缘电线（BV / BVR）</h2><p class="muted">适用于家装布线、商铺改造、办公室回路调整等常见电气安装场景，重点关注导体材质、线径规格和施工使用环境。</p></div>
+          <div class="mini">
+            <div class="mini-row"><span>适用范围</span><strong>家庭装修、门店改造、基础工程布线</strong></div>
+            <div class="mini-row"><span>常见规格</span><strong>1.5 / 2.5 / 4 / 6 / 10 mm²</strong></div>
+            <div class="mini-row"><span>导体材质</span><strong>铜芯导体，重视导电性与施工稳定性</strong></div>
+            <div class="mini-row"><span>交付方式</span><strong>支持单项补货与工程批量配货</strong></div>
           </div>
-          
-          <div class="mb-6">
-            <span class="text-3xl font-bold text-primary">¥--.--</span>
-            <span class="text-neutral-500 line-through ml-2">¥158.00</span>
-            <span class="bg-secondary/10 text-secondary text-sm px-2 py-1 rounded ml-2">限时优惠</span>
-          </div>
-          
-          <div class="border-t border-b border-neutral-200 py-6 mb-6">
-            <p class="text-neutral-700 mb-4">
-              高品质铜芯聚氯乙烯绝缘电线，适用于建筑、家庭装修等电气安装工程，具有良好的导电性和绝缘性能，安全可靠。
-            </p>
-            <div class="grid grid-cols-2 gap-4 text-sm">
-              <div class="flex items-center">
-                <span class="text-neutral-500 w-24">品牌：</span>
-                <span class="text-neutral-800">津成电缆</span>
-              </div>
-              <div class="flex items-center">
-                <span class="text-neutral-500 w-24">型号：</span>
-                <span class="text-neutral-800">BV-4mm²</span>
-              </div>
-              <div class="flex items-center">
-                <span class="text-neutral-500 w-24">材质：</span>
-                <span class="text-neutral-800">纯铜芯</span>
-              </div>
-              <div class="flex items-center">
-                <span class="text-neutral-500 w-24">长度：</span>
-                <span class="text-neutral-800">100米/卷</span>
-              </div>
-              <div class="flex items-center">
-                <span class="text-neutral-500 w-24">颜色：</span>
-                <span class="text-neutral-800">红/黄/蓝/绿/双色</span>
-              </div>
-              <div class="flex items-center">
-                <span class="text-neutral-500 w-24">认证：</span>
-                <span class="text-neutral-800">CCC认证</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- 规格选择 -->
-          <div class="mb-8">
-            <h3 class="text-neutral-800 font-medium mb-3">选择规格</h3>
-            <div class="flex flex-wrap gap-3">
-              <button class="px-4 py-2 border border-primary bg-primary/5 text-primary rounded-md hover:bg-primary/10 transition-colors">
-                1.5mm²
-              </button>
-              <button class="px-4 py-2 border border-neutral-300 rounded-md hover:border-primary hover:text-primary transition-colors">
-                2.5mm²
-              </button>
-              <button class="px-4 py-2 border border-neutral-300 rounded-md hover:border-primary hover:text-primary transition-colors">
-                4mm²
-              </button>
-              <button class="px-4 py-2 border border-neutral-300 rounded-md hover:border-primary hover:text-primary transition-colors">
-                6mm²
-              </button>
-              <button class="px-4 py-2 border border-neutral-300 rounded-md hover:border-primary hover:text-primary transition-colors">
-                10mm²
-              </button>
-            </div>
-          </div>
-          
-          <!-- 数量选择 -->
-          <div class="mb-8">
-            <h3 class="text-neutral-800 font-medium mb-3">购买数量</h3>
-            <div class="flex items-center w-36">
-              <button id="decrease-quantity" class="w-10 h-10 border border-neutral-300 rounded-l-md flex items-center justify-center hover:bg-neutral-100 transition-colors">
-                <i class="fa fa-minus text-neutral-600"></i>
-              </button>
-              <input type="number" id="quantity" value="1" min="1" class="w-16 h-10 border-y border-neutral-300 text-center focus:outline-none">
-              <button id="increase-quantity" class="w-10 h-10 border border-neutral-300 rounded-r-md flex items-center justify-center hover:bg-neutral-100 transition-colors">
-                <i class="fa fa-plus text-neutral-600"></i>
-              </button>
-            </div>
-            <p class="text-sm text-neutral-500 mt-2">库存充足 (1000卷)</p>
-          </div>
-          
-          <!-- 操作按钮 -->
-          <div class="flex flex-wrap gap-4">
-            <button class="flex-1 bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-md transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center">
-              <i class="fa fa-shopping-cart mr-2"></i> 加入购物车
-            </button>
-            <button class="bg-secondary hover:bg-secondary/90 text-white font-medium px-6 py-3 rounded-md transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-              立即购买
-            </button>
-          </div>
-          
-          <!-- 服务保障 -->
-          <div class="mt-8 pt-6 border-t border-neutral-200 flex flex-wrap gap-6">
-            <div class="flex items-center">
-              <i class="fa fa-check-circle text-primary mr-2"></i>
-              <span class="text-sm text-neutral-600">正品保障</span>
-            </div>
-            <div class="flex items-center">
-              <i class="fa fa-truck text-primary mr-2"></i>
-              <span class="text-sm text-neutral-600">24小时配送</span>
-            </div>
-            <div class="flex items-center">
-              <i class="fa fa-refresh text-primary mr-2"></i>
-              <span class="text-sm text-neutral-600">7天无理由退换</span>
-            </div>
-            <div class="flex items-center">
-              <i class="fa fa-headphones text-primary mr-2"></i>
-              <span class="text-sm text-neutral-600">专业客服</span>
-            </div>
-          </div>
-        </div>
+          <div class="tags"><span class="pill">颜色区分明确</span><span class="pill">规格沟通更直接</span><span class="pill">本地配送效率优先</span></div>
+          <ul class="list">
+            <li>用于照明、插座、空调等不同回路时，建议按线径区分采购。</li>
+            <li>如需整单配货，可同步沟通线管、线盒、开关面板等周边材料。</li>
+            <li>临时补货时，优先电话确认品牌、平方数和送达时间。</li>
+          </ul>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 产品详情tab -->
-  <section class="py-12 bg-white">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="border-b border-neutral-200">
-        <div class="flex flex-wrap -mb-px">
-          <button class="tab-button active py-4 px-6 text-primary border-b-2 border-primary font-medium" data-tab="description">
-            产品详情
-          </button>
-          <button class="tab-button py-4 px-6 text-neutral-500 hover:text-primary border-b-2 border-transparent font-medium" data-tab="specification">
-            技术参数
-          </button>
-          <button class="tab-button py-4 px-6 text-neutral-500 hover:text-primary border-b-2 border-transparent font-medium" data-tab="usage">
-            安装说明
-          </button>
-          <button class="tab-button py-4 px-6 text-neutral-500 hover:text-primary border-b-2 border-transparent font-medium" data-tab="reviews">
-            客户评价
-          </button>
+    <section class="detail-section light">
+      <div class="container">
+        <div class="heading" data-reveal><div><div class="kicker">Use Cases</div><h2>覆盖常见施工与布线场景。</h2></div><p class="lead">围绕常见施工环境和使用节点梳理应用方向，便于客户更快确认所需材料。</p></div>
+        <div class="cards-4">
+          <article class="card" data-reveal><div class="icon"><i class="fa fa-home"></i></div><h3 class="card-title">住宅装修布线</h3><p class="muted">适合新房装修、老房翻新和精装补强，重点考虑回路数量和线径匹配。</p></article>
+          <article class="card" data-reveal><div class="icon"><i class="fa fa-shopping-bag"></i></div><h3 class="card-title">店铺与办公改造</h3><p class="muted">对工期敏感，常见需求是快速确认可用规格并安排送货。</p></article>
+          <article class="card" data-reveal><div class="icon"><i class="fa fa-wrench"></i></div><h3 class="card-title">水电维修补货</h3><p class="muted">更看重单次补货效率，适合快速确认规格、数量和送货时间。</p></article>
+          <article class="card" data-reveal><div class="icon"><i class="fa fa-sitemap"></i></div><h3 class="card-title">小型工程配套</h3><p class="muted">适用于有重复型号、需统一配送节奏的中小项目。</p></article>
         </div>
       </div>
-      
-      <!-- 产品详情内容 -->
-      <div class="tab-content py-8" id="description">
-        <div class="prose max-w-none">
-          <h3 class="text-2xl font-bold mb-4">产品特点</h3>
-          <ul class="list-disc pl-5 mb-6 space-y-2">
-            <li>采用高纯度无氧铜作为导体，导电性好，电阻小，发热低</li>
-            <li>绝缘层采用优质聚氯乙烯材料，具有良好的耐老化、耐酸碱性能</li>
-            <li>符合GB/T 5023-2008国家标准，通过CCC强制认证</li>
-            <li>适用于额定电压450/750V及以下的建筑、家用电器、仪器仪表等线路连接</li>
-            <li>电线色泽均匀，结构紧密，具有良好的柔韧性和机械强度</li>
-          </ul>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <img src="./cable-detail-1.jpg" alt="电线细节展示" class="w-full h-auto rounded-lg shadow-sm">
-            <img src="./cable-detail-2.jpg" alt="电线包装展示" class="w-full h-auto rounded-lg shadow-sm">
-          </div>
-          
-          <h3 class="text-2xl font-bold mb-4">应用场景</h3>
-          <p class="mb-4">
-            广泛应用于住宅、商业建筑、办公场所、工业厂房等室内电气线路敷设，可明敷或暗敷，适用于各种照明、动力系统。
-          </p>
-          <img src="./cable-application.jpg" alt="电线应用场景" class="w-full h-auto rounded-lg shadow-sm mb-6">
-          
-          <h3 class="text-2xl font-bold mb-4">注意事项</h3>
-          <p class="mb-4">
-            安装时应避免过度弯曲和拉伸，远离热源和腐蚀性物质。不同截面积的电线承载电流不同，请根据实际用电负荷选择合适规格的产品，以确保用电安全。
-          </p>
-        </div>
-      </div>
-      
-      <!-- 技术参数内容 -->
-      <div class="tab-content py-8 hidden" id="specification">
-        <div class="overflow-x-auto">
-          <table class="min-w-full border-collapse">
-            <thead>
-              <tr class="bg-neutral-100">
-                <th class="py-3 px-4 border border-neutral-300 text-left font-bold">项目</th>
-                <th class="py-3 px-4 border border-neutral-300 text-left font-bold">参数</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="py-3 px-4 border border-neutral-300">产品名称</td>
-                <td class="py-3 px-4 border border-neutral-300">铜芯聚氯乙烯绝缘电线</td>
-              </tr>
-              <tr class="bg-neutral-50">
-                <td class="py-3 px-4 border border-neutral-300">型号规格</td>
-                <td class="py-3 px-4 border border-neutral-300">BV-4mm²</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 border border-neutral-300">导体材质</td>
-                <td class="py-3 px-4 border border-neutral-300">高纯度无氧铜</td>
-              </tr>
-              <tr class="bg-neutral-50">
-                <td class="py-3 px-4 border border-neutral-300">绝缘材料</td>
-                <td class="py-3 px-4 border border-neutral-300">聚氯乙烯(PVC)</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 border border-neutral-300">额定电压</td>
-                <td class="py-3 px-4 border border-neutral-300">450/750V</td>
-              </tr>
-              <tr class="bg-neutral-50">
-                <td class="py-3 px-4 border border-neutral-300">导体直径</td>
-                <td class="py-3 px-4 border border-neutral-300">2.25mm</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 border border-neutral-300">绝缘厚度</td>
-                <td class="py-3 px-4 border border-neutral-300">0.8mm</td>
-              </tr>
-              <tr class="bg-neutral-50">
-                <td class="py-3 px-4 border border-neutral-300">参考载流量(空气中)</td>
-                <td class="py-3 px-4 border border-neutral-300">35A</td>
-              </tr>
-              <tr>
-                <td class="py-3 px-4 border border-neutral-300">包装长度</td>
-                <td class="py-3 px-4 border border-neutral-300">100米/卷</td>
-              </tr>
-              <tr class="bg-neutral-50">
-                <td class="py-3 px-4 border border-neutral-300">执行标准</td>
-                <td class="py-3 px-4 border border-neutral-300">GB/T 5023-2008</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      
-      <!-- 安装说明内容 -->
-      <div class="tab-content py-8 hidden" id="usage">
-        <div class="prose max-w-none">
-          <h3 class="text-2xl font-bold mb-4">安装前准备</h3>
-          <ol class="list-decimal pl-5 mb-6 space-y-2">
-            <li>检查电线包装是否完好，确认产品型号、规格与所需一致</li>
-            <li>准备必要的安装工具：剥线钳、压线钳、螺丝刀、电工胶布等</li>
-            <li>确保安装环境干燥、清洁，远离火源和腐蚀性物质</li>
-          </ol>
-          
-          <h3 class="text-2xl font-bold mb-4">安装步骤</h3>
-          <ol class="list-decimal pl-5 mb-6 space-y-3">
-            <li>根据实际需要长度裁剪电线，预留适当余量</li>
-            <li>用剥线钳剥去电线两端绝缘层，露出约10-15mm的导体</li>
-            <li>将导体插入接线端子或连接器，确保连接牢固</li>
-            <li>用压线钳压紧接线端子，或用螺丝固定</li>
-            <li>用绝缘胶布包裹连接处，确保绝缘可靠</li>
-            <li>按照电气设计规范进行布线，固定电线</li>
-          </ol>
-          
-          <h3 class="text-2xl font-bold mb-4">安全注意事项</h3>
-          <ul class="list-disc pl-5 mb-6 space-y-2">
-            <li>安装操作必须由专业电工进行，确保符合电气安全规范</li>
-            <li>安装前务必切断电源，避免触电事故</li>
-            <li>不同回路的电线应分开敷设，避免干扰</li>
-            <li>电线弯曲半径不应小于电线直径的6倍</li>
-            <li>穿管敷设时，管内电线总截面积不应超过管内截面积的40%</li>
-            <li>安装完成后应进行绝缘测试和通电测试</li>
-          </ul>
-        </div>
-      </div>
-      
-      <!-- 客户评价内容 -->
-      <div class="tab-content py-8 hidden" id="reviews">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div class="lg:col-span-2">
-            <!-- 评价列表 -->
-            <div class="space-y-6">
-              <!-- 评价1 -->
-              <div class="border-b border-neutral-200 pb-6">
-                <div class="flex items-center mb-3">
-                  <img src="./user1.jpg" alt="用户头像" class="w-10 h-10 rounded-full object-cover mr-3">
-                  <div>
-                    <h4 class="font-medium">陈先生</h4>
-                    <div class="flex text-yellow-400 text-sm">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                    </div>
-                  </div>
-                  <span class="ml-auto text-neutral-500 text-sm">2025-06-15</span>
-                </div>
-                <p class="text-neutral-700 mb-3">电线质量很好，铜芯很粗，导电性好，装修师傅说这个价格能买到这样的产品很划算。已经用了一段时间，没有任何问题，推荐购买。</p>
-                <div class="flex gap-2">
-                  <img src="./review1.jpg" alt="评价图片" class="w-24 h-24 object-cover rounded">
-                  <img src="./review2.jpg" alt="评价图片" class="w-24 h-24 object-cover rounded">
-                </div>
-              </div>
-              
-              <!-- 评价2 -->
-              <div class="border-b border-neutral-200 pb-6">
-                <div class="flex items-center mb-3">
-                  <img src="./user2.jpg" alt="用户头像" class="w-10 h-10 rounded-full object-cover mr-3">
-                  <div>
-                    <h4 class="font-medium">林女士</h4>
-                    <div class="flex text-yellow-400 text-sm">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-o"></i>
-                    </div>
-                  </div>
-                  <span class="ml-auto text-neutral-500 text-sm">2025-05-28</span>
-                </div>
-                <p class="text-neutral-700">第二次购买了，之前家里装修用的就是这个牌子的电线，质量不错，这次给父母家装修也选了这款。物流很快，第二天就送到了，客服态度也很好，有问必答。</p>
-              </div>
-              
-              <!-- 评价3 -->
-              <div>
-                <div class="flex items-center mb-3">
-                  <img src="./user3.jpg" alt="用户头像" class="w-10 h-10 rounded-full object-cover mr-3">
-                  <div>
-                    <h4 class="font-medium">王师傅</h4>
-                    <div class="flex text-yellow-400 text-sm">
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>
-                      <i class="fa fa-star-half-o"></i>
-                    </div>
-                  </div>
-                  <span class="ml-auto text-neutral-500 text-sm">2025-04-10</span>
-                </div>
-                <p class="text-neutral-700">我是做装修的，一直用这个牌子的电线，质量稳定，性价比高。客户反馈都不错，几乎没有出现过问题。裕欣源的价格比其他地方便宜一些，还能送货上门，很方便。</p>
-              </div>
-            </div>
-            
-            <!-- 分页 -->
-            <div class="mt-8 flex justify-center">
-              <nav class="inline-flex rounded-md shadow">
-                <a href="#" class="px-3 py-2 text-sm font-medium text-neutral-500 bg-white border border-neutral-300 rounded-l-md hover:bg-neutral-50">
-                  <i class="fa fa-chevron-left"></i>
-                </a>
-                <a href="#" class="px-3 py-2 text-sm font-medium text-white bg-primary border border-primary">1</a>
-                <a href="#" class="px-3 py-2 text-sm font-medium text-neutral-700 bg-white border border-neutral-300 hover:bg-neutral-50">2</a>
-                <a href="#" class="px-3 py-2 text-sm font-medium text-neutral-700 bg-white border border-neutral-300 hover:bg-neutral-50">3</a>
-                <a href="#" class="px-3 py-2 text-sm font-medium text-neutral-500 bg-white border border-neutral-300 rounded-r-md hover:bg-neutral-50">
-                  <i class="fa fa-chevron-right"></i>
-                </a>
-              </nav>
-            </div>
-          </div>
-          
-          <!-- 评价统计 -->
-          <div class="bg-neutral-50 p-6 rounded-xl">
-            <h3 class="text-lg font-bold mb-4">评价统计</h3>
-            <div class="flex items-center mb-6">
-              <span class="text-4xl font-bold mr-4">4.8</span>
-              <div>
-                <div class="flex text-yellow-400 mb-1">
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i>
-                  <i class="fa fa-star-half-o"></i>
-                </div>
-                <span class="text-sm text-neutral-600">基于128条评价</span>
-              </div>
-            </div>
-            
-            <div class="space-y-2">
-              <div class="flex items-center">
-                <span class="text-sm w-8">5星</span>
-                <div class="flex-1 h-2 bg-neutral-200 rounded-full overflow-hidden mx-2">
-                  <div class="h-full bg-yellow-400 rounded-full" style="width: 75%"></div>
-                </div>
-                <span class="text-sm text-neutral-600 w-8">75%</span>
-              </div>
-              <div class="flex items-center">
-                <span class="text-sm w-8">4星</span>
-                <div class="flex-1 h-2 bg-neutral-200 rounded-full overflow-hidden mx-2">
-                  <div class="h-full bg-yellow-400 rounded-full" style="width: 18%"></div>
-                </div>
-                <span class="text-sm text-neutral-600 w-8">18%</span>
-              </div>
-              <div class="flex items-center">
-                <span class="text-sm w-8">3星</span>
-                <div class="flex-1 h-2 bg-neutral-200 rounded-full overflow-hidden mx-2">
-                  <div class="h-full bg-yellow-400 rounded-full" style="width: 5%"></div>
-                </div>
-                <span class="text-sm text-neutral-600 w-8">5%</span>
-              </div>
-              <div class="flex items-center">
-                <span class="text-sm w-8">2星</span>
-                <div class="flex-1 h-2 bg-neutral-200 rounded-full overflow-hidden mx-2">
-                  <div class="h-full bg-yellow-400 rounded-full" style="width: 1%"></div>
-                </div>
-                <span class="text-sm text-neutral-600 w-8">1%</span>
-              </div>
-              <div class="flex items-center">
-                <span class="text-sm w-8">1星</span>
-                <div class="flex-1 h-2 bg-neutral-200 rounded-full overflow-hidden mx-2">
-                  <div class="h-full bg-yellow-400 rounded-full" style="width: 1%"></div>
-                </div>
-                <span class="text-sm text-neutral-600 w-8">1%</span>
-              </div>
-            </div>
-            
-            <button class="mt-6 w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 rounded-md transition-colors">
-              写评价
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 相关产品推荐 -->
-  <section class="py-16 bg-neutral-100">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-display font-bold text-neutral-900 mb-8">相关产品推荐</h2>
-      
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- 相关产品1 -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-elevation-2 hover:shadow-elevation-3 transition-shadow">
-          <div class="h-48 overflow-hidden">
-            <img src="./cable-related1.jpg" alt="阻燃电缆" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+    <section class="detail-section">
+      <div class="container detail-grid">
+        <article class="panel" data-reveal>
+          <span class="eyebrow">Selection Notes</span>
+          <h2 class="title" style="font-size:2rem;margin-top:16px;">常见规格与选型参考</h2>
+          <div class="mini">
+            <div class="mini-row"><span>1.5 mm²</span><strong>常用于照明回路等基础负载</strong></div>
+            <div class="mini-row"><span>2.5 mm²</span><strong>常用于普通插座与日常回路配置</strong></div>
+            <div class="mini-row"><span>4 mm² 及以上</span><strong>适合大功率设备或需要更高承载的回路</strong></div>
+            <div class="mini-row"><span>沟通重点</span><strong>线径、颜色、卷数、使用场景与送达时间</strong></div>
           </div>
-          <div class="p-4">
-            <h3 class="font-bold text-neutral-900 mb-2 hover:text-primary transition-colors">
-              <a href="#">阻燃铜芯电缆</a>
-            </h3>
-            <p class="text-primary font-bold">¥市价</p>
-            <div class="flex items-center mt-3">
-              <div class="flex text-yellow-400 text-xs mr-2">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-              </div>
-              <span class="text-xs text-neutral-500">(42条评价)</span>
-            </div>
+        </article>
+        <article class="panel" data-reveal>
+          <span class="eyebrow">Service Flow</span>
+          <h2 class="title" style="font-size:2rem;margin-top:16px;">询价到配货的沟通流程</h2>
+          <div class="process">
+            <div class="process-item"><div class="num">01</div><div><strong>发来清单或口述需求</strong><p class="muted">可以按线径、用途和大致数量描述，我们先帮你判断可配型号。</p></div></div>
+            <div class="process-item"><div class="num">02</div><div><strong>确认品牌、规格与供货节奏</strong><p class="muted">建议通过电话或微信进一步确认线径、颜色、数量和送达时间。</p></div></div>
+            <div class="process-item"><div class="num">03</div><div><strong>安排配货与本地配送</strong><p class="muted">适合临时补货、分批送货和工程节点性发货。</p></div></div>
           </div>
-        </div>
-        
-        <!-- 相关产品2 -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-elevation-2 hover:shadow-elevation-3 transition-shadow">
-          <div class="h-48 overflow-hidden">
-            <img src="./cable-related2.jpg" alt="护套线" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-          </div>
-          <div class="p-4">
-            <h3 class="font-bold text-neutral-900 mb-2 hover:text-primary transition-colors">
-              <a href="#">铜芯聚氯乙烯护套线</a>
-            </h3>
-            <p class="text-primary font-bold">¥市价</p>
-            <div class="flex items-center mt-3">
-              <div class="flex text-yellow-400 text-xs mr-2">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
-              </div>
-              <span class="text-xs text-neutral-500">(76条评价)</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- 相关产品3 -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-elevation-2 hover:shadow-elevation-3 transition-shadow">
-          <div class="h-48 overflow-hidden">
-            <img src="./cable-related3.jpg" alt="电缆盘" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-          </div>
-          <div class="p-4">
-            <h3 class="font-bold text-neutral-900 mb-2 hover:text-primary transition-colors">
-              <a href="#">移动电缆盘</a>
-            </h3>
-            <p class="text-primary font-bold">¥市价</p>
-            <div class="flex items-center mt-3">
-              <div class="flex text-yellow-400 text-xs mr-2">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <span class="text-xs text-neutral-500">(35条评价)</span>
-            </div>
-          </div>
-        </div>
-        
-        <!-- 相关产品4 -->
-        <div class="bg-white rounded-xl overflow-hidden shadow-elevation-2 hover:shadow-elevation-3 transition-shadow">
-          <div class="h-48 overflow-hidden">
-            <img src="./cable-related4.jpg" alt="电线管" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-          </div>
-          <div class="p-4">
-            <h3 class="font-bold text-neutral-900 mb-2 hover:text-primary transition-colors">
-              <a href="#">PVC电线管</a>
-            </h3>
-            <p class="text-primary font-bold">¥市价/米</p>
-            <div class="flex items-center mt-3">
-              <div class="flex text-yellow-400 text-xs mr-2">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-              </div>
-              <span class="text-xs text-neutral-500">(58条评价)</span>
-            </div>
-          </div>
-        </div>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 页脚 -->
-  <footer class="bg-neutral-900 text-white pt-16 pb-8">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-        <div>
-          <div class="flex items-center space-x-2 mb-6">
-            <i class="fa fa-building-o text-white text-3xl"></i>
-            <span class="font-display font-bold text-xl">裕欣源建材</span>
-          </div>
-          <p class="text-neutral-400 mb-6">
-            专业从事水电材料和装修材料批发与销售的综合性企业，为您提供高品质的产品和服务。
-          </p>
-          <div class="flex space-x-4">
-            <a href="weixin://dl/chat?a1455705850" class="text-neutral-400 hover:text-white transition-colors">
-              <i class="fa fa-weixin text-xl"></i>
-            </a>
-            <a href="#" class="text-neutral-400 hover:text-white transition-colors">
-              <i class="fa fa-weibo text-xl"></i>
-            </a>
-            <a href="#" class="text-neutral-400 hover:text-white transition-colors">
-              <i class="fa fa-qq text-xl"></i>
-            </a>
-          </div>
+    <section class="detail-section light">
+      <div class="container">
+        <div class="heading" data-reveal><div><div class="kicker">Related Categories</div><h2>常见关联材料可一并咨询。</h2></div><p class="lead">如果项目同时涉及给排水、卫浴或照明配套，可结合施工进度统一沟通采购安排。</p></div>
+        <div class="cards-3">
+          <article class="card" data-reveal><div class="media"><img src="./15953122862.jpg" alt="水管配件"></div><h3 class="card-title">水管配件</h3><p class="muted">如果项目同时包含给排水节点，可以一并沟通管材、弯头和阀件。</p><a class="button-secondary" href="./pipe-details.html">查看水管配件</a></article>
+          <article class="card" data-reveal><div class="media"><img src="./ban1.jpg" alt="卫浴洁具"></div><h3 class="card-title">卫浴洁具</h3><p class="muted">收尾阶段常与电气材料分批采购，支持咨询式承接。</p><a class="button-secondary" href="./index.html#contact">咨询洁具产品</a></article>
+          <article class="card" data-reveal><div class="media"><img src="./pic.jpg" alt="灯具照明"></div><h3 class="card-title">灯具照明</h3><p class="muted">适合与布线材料一起讨论，减少后期回路与灯具匹配问题。</p><a class="button-secondary" href="./index.html#contact">咨询照明产品</a></article>
         </div>
-        <div>
-          <h4 class="text-lg font-bold mb-6">快速链接</h4>
-          <ul class="space-y-3">
-            <li><a href="index.html#home" class="text-neutral-400 hover:text-white transition-colors">首页</a></li>
-            <li><a href="index.html#products" class="text-neutral-400 hover:text-white transition-colors">产品中心</a></li>
-            <li><a href="index.html#about" class="text-neutral-400 hover:text-white transition-colors">关于我们</a></li>
-            <li><a href="index.html#advantage" class="text-neutral-400 hover:text-white transition-colors">服务优势</a></li>
-            <li><a href="index.html#contact" class="text-neutral-400 hover:text-white transition-colors">联系我们</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-lg font-bold mb-6">产品分类</h4>
-          <ul class="space-y-3">
-            <li><a href="cable-details.html" class="text-neutral-400 hover:text-white transition-colors">电缆电线</a></li>
-            <li><a href="pipe-details.html" class="text-neutral-400 hover:text-white transition-colors">水管配件</a></li>
-            <li><a href="bathroom-details.html" class="text-neutral-400 hover:text-white transition-colors">卫浴洁具</a></li>
-            <li><a href="lighting-details.html" class="text-neutral-400 hover:text-white transition-colors">灯具照明</a></li>
-            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">其他产品</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="text-lg font-bold mb-6">联系方式</h4>
-          <ul class="space-y-4">
-            <li class="flex items-start">
-              <i class="fa fa-map-marker text-neutral-400 mr-3 mt-1"></i>
-              <span class="text-neutral-400">福建省福州市晋安区家居物联网展示中心D区12号</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fa fa-phone text-neutral-400 mr-3 mt-1"></i>
-              <span class="text-neutral-400">15005902473</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fa fa-envelope text-neutral-400 mr-3 mt-1"></i>
-              <span class="text-neutral-400">admin@vatebur.cn</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fa fa-clock-o text-neutral-400 mr-3 mt-1"></i>
-              <span class="text-neutral-400">周一至周日: 8:00 - 18:00</span>
-            </li>
-          </ul>
+        <div class="cta-band" data-reveal>
+          <div><h3 class="card-title">已经明确线径或项目清单了？</h3><p class="muted">直接打电话会比在线留言更快完成确认，尤其适合补货和紧急送货。</p></div>
+          <div class="actions" style="margin-top:0;"><a class="button" href="tel:15005902473"><i class="fa fa-phone"></i> 立即致电</a><a class="button-secondary" href="./index.html#contact"><i class="fa fa-envelope-o"></i> 返回留言区</a></div>
         </div>
       </div>
-      <div class="border-t border-neutral-800 pt-8">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <p class="text-neutral-500 text-sm mb-4 md:mb-0">
-            © 2025 裕欣源建材. 保留所有权利.
-          </p>
-           <p class="text-neutral-500 text-sm mb-4 md:mb-0">
-            闽ICP备2025109422号
-          </p>
-          <p class="text-neutral-500 text-sm mb-4 md:mb-0">
-          闽公网安备35011102351122号
-          </p>
-          <div class="flex space-x-6">
-            <a href="#" class="text-neutral-500 hover:text-white text-sm transition-colors">隐私政策</a>
-            <a href="#" class="text-neutral-500 hover:text-white text-sm transition-colors">使用条款</a>
-            <a href="#" class="text-neutral-500 hover:text-white text-sm transition-colors">网站地图</a>
-          </div>
-        </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><a class="brand" href="./index.html"><span class="brand-mark"><i class="fa fa-building-o"></i></span><span class="brand-text"><strong>裕欣源建材</strong><span>ENGINEERING SUPPLY</span></span></a><p class="footer-copy">提供常用电缆电线规格说明、适用场景参考和本地配货沟通支持。</p></div>
+        <div><h3 class="footer-title">站内导航</h3><ul class="footer-list"><li><a href="./index.html">首页</a></li><li><a href="./index.html#categories">主营品类</a></li><li><a href="./index.html#featured">重点产品</a></li></ul></div>
+        <div><h3 class="footer-title">关联页面</h3><ul class="footer-list"><li><a href="./pipe-details.html">水管配件详情</a></li><li><a href="./index.html#contact">联系报价</a></li></ul></div>
+        <div><h3 class="footer-title">联系信息</h3><ul class="footer-list"><li>电话：15005902473</li><li>邮箱：admin@vatebur.cn</li><li>地址：福州市晋安区家居物联网展示中心 D 区 12 号</li></ul></div>
       </div>
+      <div class="meta"><span>© 2025 裕欣源建材</span><span>闽ICP备2025109422号</span><span>闽公网安备35011102351122号</span></div>
     </div>
   </footer>
 
-  <!-- 回到顶部按钮 -->
-  <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-elevation-2 opacity-0 invisible transition-all duration-300 hover:bg-primary/90 focus:outline-none">
-    <i class="fa fa-chevron-up"></i>
-  </button>
-
-  <!-- JavaScript -->
-  <script>
-    // 移动端菜单切换
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-    
-    // 导航栏滚动效果
-    const navbar = document.getElementById('navbar');
-    
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      
-      if (scrollTop > 50) {
-        navbar.classList.add('py-2');
-        navbar.classList.remove('py-4');
-        navbar.classList.add('shadow-elevation-2');
-      } else {
-        navbar.classList.remove('py-2');
-        navbar.classList.add('py-4');
-        navbar.classList.remove('shadow-elevation-2');
-      }
-    });
-    
-    // 回到顶部按钮
-    const backToTopButton = document.getElementById('back-to-top');
-    
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        backToTopButton.classList.remove('opacity-0', 'invisible');
-        backToTopButton.classList.add('opacity-100', 'visible');
-      } else {
-        backToTopButton.classList.add('opacity-0', 'invisible');
-        backToTopButton.classList.remove('opacity-100', 'visible');
-      }
-    });
-    
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-    
-    // 数量选择
-    const decreaseBtn = document.getElementById('decrease-quantity');
-    const increaseBtn = document.getElementById('increase-quantity');
-    const quantityInput = document.getElementById('quantity');
-    
-    decreaseBtn.addEventListener('click', () => {
-      let quantity = parseInt(quantityInput.value);
-      if (quantity > 1) {
-        quantityInput.value = quantity - 1;
-      }
-    });
-    
-    increaseBtn.addEventListener('click', () => {
-      let quantity = parseInt(quantityInput.value);
-      quantityInput.value = quantity + 1;
-    });
-    
-    // 产品图片切换
-    const thumbnails = document.querySelectorAll('.grid.grid-cols-4 img');
-    const mainImage = document.getElementById('main-product-image');
-    
-    thumbnails.forEach(thumbnail => {
-      thumbnail.addEventListener('click', () => {
-        // 更新主图
-        mainImage.src = thumbnail.src;
-        
-        // 更新缩略图状态
-        thumbnails.forEach(img => {
-          img.classList.remove('product-thumbnail-active');
-          img.classList.add('border-transparent', 'opacity-70');
-        });
-        
-        thumbnail.classList.add('product-thumbnail-active');
-        thumbnail.classList.remove('border-transparent', 'opacity-70');
-      });
-    });
-    
-    // Tab切换
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabContents = document.querySelectorAll('.tab-content');
-    
-    tabButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        // 移除所有active类
-        tabButtons.forEach(btn => {
-          btn.classList.remove('active', 'text-primary', 'border-primary');
-          btn.classList.add('text-neutral-500', 'border-transparent');
-        });
-        
-        // 给当前点击的按钮添加active类
-        button.classList.add('active', 'text-primary', 'border-primary');
-        button.classList.remove('text-neutral-500', 'border-transparent');
-        
-        // 隐藏所有内容
-        tabContents.forEach(content => {
-          content.classList.add('hidden');
-        });
-        
-        // 显示对应内容
-        const tabId = button.getAttribute('data-tab');
-        document.getElementById(tabId).classList.remove('hidden');
-      });
-    });
-    
-    // 平滑滚动
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-        
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          // 关闭移动菜单（如果打开）
-          if (!mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-          }
-          
-          // 滚动到目标位置
-          const navbarHeight = navbar.offsetHeight;
-          const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-          
-          window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  </script>
+  <button class="back-to-top" type="button" data-back-to-top aria-label="回到顶部"><i class="fa fa-chevron-up"></i></button>
+  <script src="./site.js"></script>
 </body>
 </html>
